@@ -6,7 +6,8 @@ GO
 EXEC sp_add_jobstep  
     @job_name = N'Approve noon reports',  
     @step_name = N'Step 1',  
-    @subsystem = N'TSQL',  
+    @subsystem = N'TSQL',
+    @database_name = N'Operations',
     @command = N'EXECUTE SP_Approve_noon_reports',
     @retry_attempts = 5,  
     @retry_interval = 5 ;  
